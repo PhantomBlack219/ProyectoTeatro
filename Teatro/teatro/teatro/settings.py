@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from telnetlib import LOGOUT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'obras.apps.obrasConfig'
+    'obras.apps.ObrasConfig',
+    'django.contrib.postgres'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'teatro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'efsnreca',
+        'USER': 'efsnreca',
+        'PASSWORD': 'IqBuOICAzH-kK973pTejhj_9Wa1W16qR',
+        'HOST': 'jelani.db.elephantsql.com',
+        'PORT': ''
     }
 }
 
@@ -104,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -117,6 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+LOGIN_REDIRECT_URL = '/'
+#LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
