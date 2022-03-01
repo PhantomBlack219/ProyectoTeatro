@@ -1,0 +1,15 @@
+{% extends "login.html" %}
+
+{% block headers %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<title>Nuevo Autor</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="login">
+    <p>Logged out!</p>
+
+    <a href="{% url 'login'%}">Click here to login again.</a>
+</div>
+{% endblock %}
