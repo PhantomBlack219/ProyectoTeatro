@@ -13,6 +13,6 @@ def index(request):
     return HttpResponse(template.render(context,request))
 
 def obras(request):
-    template = loader.get_template('./templates/oteatro/obras.htmls')
+    template = loader.get_template('oteatro/obras.html')
     context = {}
     return HttpResponse(template.render(context,request))
