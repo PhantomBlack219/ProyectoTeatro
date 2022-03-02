@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block headers %}
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>TUIS - Teatro UIS</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -15,22 +15,22 @@
 
     <section class="py-5">
         <div class="container px-5">
-            <h1 class="fw-bolder fs-5 mb-4">Company Blog</h1>
+            <h1 class="fw-bolder fs-5 mb-4">HOME</h1>
             <div class="card border-0 shadow rounded-3 overflow-hidden">
                 <div class="card-body p-0">
                     <div class="row gx-0">
                         <div class="col-lg-6 col-xl-5 py-lg-5">
                             <div class="p-4 p-md-5">
-                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                <div class="h2 fw-bolder">Article heading goes here</div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
-                                <a class="stretched-link text-decoration-none" href="#!">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Artículo</div>
+                                <div class="h2 fw-bolder">Un Viajecito Cultural</div>
+                                <p>El teatro UIS seguirá recibiendo aplausos y se mantendrá en pie, regalándole a Santander espectáculos de calidad...</p>
+                                <a class="stretched-link text-decoration-none" href="{% url 'blog' %}">
                                     Read more
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://dummyimage.com/700x350/343a40/6c757d')"></div></div>
+                        <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://teatrouis.info/images/IMG_0388.jpg')"></div></div>
                     </div>
                 </div>
             </div>
@@ -68,17 +68,17 @@
                         <div class="card-body p-4">
                             <div class="d-flex h-100 align-items-center justify-content-center">
                                 <div class="text-center">
-                                    <div class="h6 fw-bolder">Contact</div>
+                                    <div class="h6 fw-bolder">Contacto</div>
                                     <p class="text-muted mb-4">
-                                        For press inquiries, email us at
+                                        Nos puede contactar mediante nuestro correo:
                                         <br />
-                                        <a href="#!">press@domain.com</a>
+                                        <a href="#!">teatrouis@teatrouis.info</a>
                                     </p>
                                     <div class="h6 fw-bolder">Follow us</div>
                                     <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-twitter"></i></a>
                                     <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-facebook"></i></a>
                                     <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-linkedin"></i></a>
-                                    <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-youtube"></i></a>
+                                    <a class="fs-5 px-2 link-dark" href="https://www.youtube.com/channel/UC_zR2iKJVcdh_a7AvHmN0kg?view_as=subscriber"><i class="bi-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -94,11 +94,11 @@
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5">
                     <div class="card h-100 shadow border-0">
-                        <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                        <img class="card-img-top" src="https://cu.epm.com.co/Portals/institucional/EasyDNNnews/561/img-Teatro-Pablo-Tobon1.jpg" alt="..." />
                         <div class="card-body p-4">
                             <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                            <a class="text-decoration-none link-dark stretched-link" href="#!"><div class="h5 card-title mb-3">Blog post title</div></a>
-                            <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a class="text-decoration-none link-dark stretched-link" href="{% url 'b1' %}"><div class="h5 card-title mb-3">Alcen la mano...</div></a>
+                            <p class="card-text mb-0">Lo más importante,  esperamos que se diviertan.</p>
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                             <div class="d-flex align-items-end justify-content-between">

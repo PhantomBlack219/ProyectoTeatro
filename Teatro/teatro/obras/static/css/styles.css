@@ -11308,3 +11308,14 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+
+.login {
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 20%;
+  margin-top: 20%;
+  background-color: rgb(255, 250, 250);
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
