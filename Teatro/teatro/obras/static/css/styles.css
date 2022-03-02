@@ -11308,3 +11308,7 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+
+div.imagen_fondo{
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2Fstock-photos%2Ftelon-teatro.html&psig=AOvVaw2gnEa0A3x9HNh0rpQdlOqf&ust=1646278456379000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiqkqi_pvYCFQAAAAAdAAAAABAD");
+}
