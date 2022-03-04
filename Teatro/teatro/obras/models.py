@@ -1,11 +1,16 @@
+
 from django.db import models
 
 # Create your models here.
 
 class Obras(models.Model):
     nombre = models.CharField(max_length=200)
-    sinopsis = models.CharField(max_length=200)
+    sinopsis = models.CharField(max_length=1000)
     foto = models.CharField(max_length=200, default="link")
+    duración= models.CharField(max_length=200)
+    genero= models.CharField(max_length=200)
+    publico= models.CharField(max_length=200)
+    cant_actores=models.IntegerField()
     
 
     def get_nombre(self):
@@ -14,6 +19,14 @@ class Obras(models.Model):
         return self.sinopsis
     def get_foto(self):
         return self.foto
+    def get_duración(self):
+        return self.duración
+    def get_publico(self):
+        return self.publico
+    def get_canActores(self):
+        return self.cant_actores
+    def get_genero(self):
+        return self.genero
     
     def __str__(self):
         texto= "{0} ({1})"
@@ -21,7 +34,7 @@ class Obras(models.Model):
 
 class Personajes(models.Model):
     nombrep = models.CharField(max_length=200)
-    Descripción = models.CharField(max_length=500)
+    Descripción = models.CharField(max_length=11000)
     fotoP = models.CharField(max_length=200, default="link")
     obra =  models.ForeignKey(Obras, on_delete=models.CASCADE)
 
@@ -39,7 +52,7 @@ class Personajes(models.Model):
 class Actores(models.Model):
     nombreA = models.CharField(max_length=200)
     apellidoA =  models.CharField(max_length=200)
-    DescripciónA = models.CharField(max_length=500)
+    DescripciónA = models.CharField(max_length=1000)
     fotoA = models.CharField(max_length=200, default="link")
 
     def get_nombreA(self):

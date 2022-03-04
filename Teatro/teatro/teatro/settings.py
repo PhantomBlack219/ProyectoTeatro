@@ -57,7 +57,7 @@ ROOT_URLCONF = 'teatro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'teatro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'efsnreca',
-        'USER': 'efsnreca',
-        'PASSWORD': 'IqBuOICAzH-kK973pTejhj_9Wa1W16qR',
-        'HOST': 'jelani.db.elephantsql.com',
+        'NAME': 'loxunwou',
+        'USER': 'loxunwou',
+        'PASSWORD': 'nu_VLi3xNYN-b8nerJIg3Ahkn7y273G2',
+        'HOST': 'castor.db.elephantsql.com',
         'PORT': ''
     }
 }
@@ -126,6 +126,7 @@ STATIC_URL = 'static/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

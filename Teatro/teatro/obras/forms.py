@@ -14,6 +14,10 @@ class ObrasForm(forms.ModelForm):
             'nombre',
             'sinopsis',
             'foto',
+            'duración',
+            'genero',
+            'publico',
+            'cantidad actores',
         ]
 class PersonajesForm(forms.ModelForm):
 

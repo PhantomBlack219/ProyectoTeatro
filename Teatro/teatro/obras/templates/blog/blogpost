@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block headers %}
+    <title>Blog</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    {% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center mt-lg-5 mb-4">
+                    <img class="img-fluid rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." />
+                    <div class="ms-3">
+                        <div class="fw-bold">Leidy Yepes</div>
+                        <div class="text-muted">Historia, Recorridos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Un Viajecito Cultural.</h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Junio 24, 2021</div>
+                        <!-- Post categories-->
+                        <a class="badge bg-secondary text-decoration-none link-light" href="#!"></a>
+                        <a class="badge bg-secondary text-decoration-none link-light" href="#!"></a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded" src="https://teatrouis.info/images/IMG_0388.jpg" alt="..." /></figure>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">Los viajes por los pueblitos de Santander siempre han sido muy populares, es así como después de una temporada de restricciones y encierro la gente retoma sus paseos de los fines des semana y se va a buscar una aventura por las carreteras del departamento, “buscando la fiesta” como decimos popularmente, para esto Barichara abrió sus puertas este fin se semana y dentro de su repertorio no dejó a un lado el aspecto cultural, aquellas presentaciones para públicos selectos que buscan otras alternativas.
+                        </p>
+                        <p class="fs-5 mb-4">El TEATRO UIS hizo parte de la programación de estas fiestas culturales, con una función que debió ser cancelada por motivos de lluvia “Pandemia Bufa”, la obra que se presentaría el sábado pasado en El parque para las artes, se convirtió en una doble presentación el domingo, con un público agradable y comprometido, un público que buscaba otra opción de entretenimiento en la oferta del pueblito más lindo de Colombia.</p>
+                        <p class="fs-5 mb-4">Barichara fue el escenario para el estreno de la nueva obra de la agrupación, una que promete temporada en los Domingos de teatro en Bucaramanga, “El Secreto” una adaptación libre de una obra del español Alejandro Casona, es la obra que garantiza el regreso a la normalidad, de un grupo que no ha detenido sus actividades a pesar de la pandemia. Los actores de la agrupación presentaron una amena interpretación del clásico español, en el Instituto Técnico Aquileo Parra. Una obra divertida, que nos recuerda escenas cotidianas, historias inverosímiles y un matrimonio que se hace los típicos reproches de una pareja casada. Una historia basada en la tradición oral que, con las luces, el escenario, el vestuario y los actores, por supuesto, hacen que el espectador quiera saber lo que va a ocurrir, ellos son los encargados de permitirnos escapar por un momento de nuestras realidades para que hagamos parte de un mundo que construyeron para nosotros.</p>
+                        <h2 class="fw-bolder mb-4 mt-5">Brillando en el estrellato.</h2>
+                        <p class="fs-5 mb-4">El grupo logra su objetivo como siempre, un estreno que permitió a la agrupación mostrar dos funciones, una de Pandemia Bufa, que ha estado en repertorio desde noviembre del 2020, con la cuál han promovido un sentido diferente y una nueva interpretación de estos tiempos difíciles que poco a poco vamos superando y otra de su nuevo trabajo.
+                        </p>
+                        
+                    </section>
+                </article>
+                
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+<div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+        <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2021</div></div>
+        <div class="col-auto">
+            <a class="link-light small" href="#!">Privacy</a>
+            <span class="text-white mx-1">&middot;</span>
+            <a class="link-light small" href="#!">Terms</a>
+            <span class="text-white mx-1">&middot;</span>
+            <a class="link-light small" href="#!">Contact</a>
+        </div>
+    </div>
+</div>
+</footer>
+{% endblock %}
