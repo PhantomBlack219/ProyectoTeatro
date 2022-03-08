@@ -11319,3 +11319,12 @@ html {
   border-radius: 5px;
   text-align: center;
 }
+
+.carousel-caption {
+  right: 5%;
+  text-align: right;
+  background-color: black;
+  max-width: 300px;
+  left: auto;
+  padding:5px;
+}
