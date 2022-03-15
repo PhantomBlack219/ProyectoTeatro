@@ -1,6 +1,6 @@
 from django import forms
 from .models import Blog, Obras
-from .models import Personajes, Actores
+from .models import Personajes, Actores, ActoresPersonajes
 
 #Crear formulario
 class ObrasForm(forms.ModelForm):
@@ -17,7 +17,7 @@ class ObrasForm(forms.ModelForm):
             'duración',
             'genero',
             'publico',
-            'cantidad actores',
+            'cant_actores',
         ]
 class PersonajesForm(forms.ModelForm):
 
@@ -27,9 +27,9 @@ class PersonajesForm(forms.ModelForm):
 
         #especificar los campos
         fields = [
-            'nombre', 
+            'nombrep', 
             'Descripción', 
-            'foto', 
+            'fotoP', 
             'obra', 
         ]
         
@@ -41,11 +41,11 @@ class ActoresForm(forms.ModelForm):
 
         #especificar los campos
         fields = [
-            'nombre', 
-            'apellido', 
-            'Descripción', 
-            'foto',
-            'cargo', 
+            'nombreA', 
+            'apellidoA', 
+            'DescripciónA', 
+            'fotoA',
+            'CargoA', 
         ]
 
 class BlogForm(forms.ModelForm):
@@ -56,10 +56,21 @@ class BlogForm(forms.ModelForm):
 
         #especificar los campos
         fields = [
-            'foto', 
-            'titulo', 
-            'fecha', 
-            'nombre',
-            'escrito', 
+            'fotoB', 
+            'tituloB', 
+            'fechaB', 
+            'nombreB',
+            'escritoB', 
         ]
-        #io
+        
+class EncuestaForm(forms.ModelForm):
+
+    #metaclase
+    class Meta:
+        model = ActoresPersonajes
+
+        #especificar los campos
+        fields = [
+            'Personaje', 
+            'Actor',  
+        ]        

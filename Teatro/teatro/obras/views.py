@@ -7,6 +7,7 @@ from django.template import loader
 from django.views.generic.detail import DetailView
 
 from .models import Obras, Actores, Blog
+from .forms import EncuestaForm
 
 #vista para listar Actores
 def listarActores(request):
@@ -15,7 +16,7 @@ def listarActores(request):
     template = loader.get_template('Home/index.html')
     return HttpResponse(template.render(context,request))
 
-#vista para listar Actores
+#vista para listar Blog
 def listarBlog(request):
     listaB = Blog.objects.all()
     context = {'listaB':listaB}
@@ -29,19 +30,10 @@ def quienessomos(request):
     return HttpResponse(template.render(context,request))
 
 def blog(request):
-    template = loader.get_template('blog/blogpost')
+    template = loader.get_template('blog/blogpost.html')
     context = {}
     return HttpResponse(template.render(context,request))
 
-def bloghome(request):
-    template = loader.get_template('blog/bloghome')
-    context = {}
-    return HttpResponse(template.render(context,request))
-
-def blog1(request):
-    template = loader.get_template('blog/blog1')
-    context = {}
-    return HttpResponse(template.render(context,request))
 
 #vista para listar obras
 def listarObras(request):
@@ -49,6 +41,8 @@ def listarObras(request):
     context = {'lista':lista}
     template = loader.get_template('oteatro/obras.html')
     return HttpResponse(template.render(context,request))
+
+
 
 
 #Vista para ver detalles de una obra
@@ -65,5 +59,19 @@ def detail_view_blog(request, id):
 
     context['object'] = Blog.objects.get(id = id)
 
-    return render(request,'oteatro/blog_detalle.html',context)
+    return render(request,'blog/blog_detalle.html',context)
+
+def create_Encuesta(request):
+
+    context = {}
+
+    form = EncuestaForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('obras')
+    
+    context['form'] = form
+    return render(request,'oteatro/obras_encuesta.html', context)
+
+
 

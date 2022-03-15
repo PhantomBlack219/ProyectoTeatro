@@ -1,7 +1,8 @@
+
 {% extends "base.html" %}
 {% load static %}
 {% block headers %}
-<title>Obras</title>
+<title>Encuesta</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="https://soyteatro.com/wp-content/uploads/2016/05/Teatro.png" />
     <!-- Bootstrap icons-->
@@ -10,23 +11,29 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
     {% endblock %}
     {% block content %} 
+
+
 <section class="py-5 bg-light" id="scroll-target">
     <div class="container px-5 my-5">
         <div class="row gx-5 align-items-center">
-            <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{ object.foto }}" alt="..." /></div>
+            <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://cotillonfestday.pe/img/uploads/mascaras-de-teatro-comedia-drama.jpg" alt="..." /></div>
             <div class="col-lg-6">
-                <h2 class="fw-bolder">{{ object.nombre }}</h2>
-                <p class="lead fw-normal text-muted mb-0">{{ object.sinopsis }}</p>
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-light">{{ object.genero }}</li>
-                    <li class="list-group-item list-group-item-light">{{ object.publico }}</li>
-                    <li class="list-group-item list-group-item-light">{{ object.duración }}</li>
-                  </ul> 
-                  
-                  
-                    
+                <div class="container formulario">
+                    <form method="POST" enctype="multipart/form-data">
+                 
+                        <!-- Security token -->
+                        {% csrf_token %}
+                     
+                        <!-- Using the formset -->
+                        {{ form.as_p }}
+                         
+                        <input type="submit" value="Guardar" class="btn btn-success">
+                    </form>   
+                </div>
+                
             </div>
         </div>
     </div>
 </section>
+
 {% endblock %}
