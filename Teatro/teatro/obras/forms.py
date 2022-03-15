@@ -1,5 +1,6 @@
+from attr import fields
 from django import forms
-from .models import Obras
+from .models import Blog, Obras
 from .models import Personajes, Actores
 
 #Crear formulario
@@ -45,4 +46,17 @@ class ActoresForm(forms.ModelForm):
             'apellido', 
             'Descripción', 
             'foto', 
+        ]
+        
+class BlogForm(forms.ModelForm):
+    
+    class Meta:
+        model = Blog
+        
+        fields = [
+            'titulo',
+            'fecha',
+            'nombre',
+            'escrito',
+            'foto',
         ]
