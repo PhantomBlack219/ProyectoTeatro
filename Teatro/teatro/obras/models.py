@@ -1,4 +1,5 @@
 
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -65,3 +66,26 @@ class Actores(models.Model):
     def __str__(self):
         texto= "{0} ({1})"
         return texto.format(self.nombreA + ' '+ self.apellidoA, self.id)
+    
+class Blog(models.Model):
+        
+    fotoB = models.CharField(max_length=200, default="link")
+    tituloP =  models.CharField(max_length=200)
+    fechaA = models.CharField(max_length=100)
+    nombreAu = models.CharField(max_length=200)
+    escritoC = models.CharField(max_Length=10000)
+    
+    def get_fotoP(self):
+        return self.fotoB
+    def get_tituloP(self):
+        return self.tituloP
+    def get_fechaA(self):
+        return self.fechaA
+    def get_nombreAu(self):
+        return self.nombreAu
+    def get_escritoC(self):
+        return self.escritoC
+    
+    def __str__(self):
+        texto= "{0} ({1})"
+        return texto.format(self.tituloP+ ' '+ self.nombreAu, self.fechaA,self.escritoC)
