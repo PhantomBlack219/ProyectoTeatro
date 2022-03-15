@@ -1,5 +1,6 @@
+from attr import fields
 from django import forms
-from .models import Obras
+from .models import Blog, Obras
 from .models import Personajes, Actores
 
 #Crear formulario
