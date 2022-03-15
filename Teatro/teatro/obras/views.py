@@ -8,6 +8,12 @@ from django.views.generic.detail import DetailView
 
 from .models import Obras, Actores
 
+#vista para listar Actores
+def listarActores(request):
+    listaA = Actores.objects.all()
+    context = {'listaA':listaA}
+    template = loader.get_template('Home/index.html')
+    return HttpResponse(template.render(context,request))
 
 def quienessomos(request):
     template = loader.get_template('Quienes_somos/QuienesSomos.html')
@@ -36,12 +42,6 @@ def listarObras(request):
     template = loader.get_template('oteatro/obras.html')
     return HttpResponse(template.render(context,request))
 
-#vista para listar Actores
-def listarActores(request):
-    listaA = Actores.objects.all()
-    context = {'listaA':listaA}
-    template = loader.get_template('Home/index.html')
-    return HttpResponse(template.render(context,request))
 
 #Vista para ver detalles de una obra
 def detail_view(request, id):
