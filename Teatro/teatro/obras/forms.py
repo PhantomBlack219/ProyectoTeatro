@@ -62,3 +62,4 @@ class BlogForm(forms.ModelForm):
             'nombre',
             'escrito', 
         ]
+        #io
