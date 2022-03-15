@@ -12,5 +12,4 @@ urlpatterns = [
     path('bloghome/', views.bloghome, name='bh'),
     path('blog1/', views.blog1, name='b1'),
     path('obras/<id>/', views.detail_view, name='obras_detalle'),
-    path('blog/', views.blog, name='blog'),
 ]
