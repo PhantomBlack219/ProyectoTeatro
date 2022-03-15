@@ -15,6 +15,7 @@ def listarActores(request):
     template = loader.get_template('Home/index.html')
     return HttpResponse(template.render(context,request))
 
+
 def quienessomos(request):
     template = loader.get_template('Quienes_somos/QuienesSomos.html')
     context = {}
@@ -50,3 +51,4 @@ def detail_view(request, id):
     context['object'] = Obras.objects.get(id = id)
 
     return render(request,'oteatro/obras_detalle.html',context)
+

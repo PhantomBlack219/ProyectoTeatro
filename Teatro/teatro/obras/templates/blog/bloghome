@@ -19,31 +19,15 @@
             <p class="lead fw-normal text-muted mb-0">Portafolio Teatro</p>
         </div>
         <div class="row gx-5">
-            <div class="col-lg-6">
+            
+            <div class="col-lg-6"  display = "inline">
                 <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="https://cu.epm.com.co/Portals/institucional/EasyDNNnews/561/img-Teatro-Pablo-Tobon1.jpg" alt="..." />
+                    <img class="img-fluid rounded-3 mb-3" src="" alt="..." />
                     <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'b1' %}">Alcen la mano…</a>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="position-relative mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="position-relative">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                </div>
-            </div>
-        </div>
+        
+            
     </div>
 </section>
 <section class="py-5 bg-light">

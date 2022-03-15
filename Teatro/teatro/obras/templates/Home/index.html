@@ -81,26 +81,13 @@
                     <img class="img-fluid rounded-circle mb-xl-0 px-5 p-3" src="{{  au.get_fotoA }}" alt="..." />
                     <h5 class="fw-bolder"></h5>
                     <div class="fst-italic text-muted"></div>
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          {{ au.get_nombreA }}
+                        <button type="text" class="btn btn-outline-info" disabled>
+                          {{ au.get_nombreA }} {{ au.get_apellidoA }}
                           </button>
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header text-center">
-                                  <h5 class="modal-title" id="exampleModalLabel">Papel</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  {{ au.get_descripcionA }}
-                                </div>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                    <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-group-item-light">{{ au.get_cargoA }}</li>
+                            <li class="list-group-item list-group-item-light">{{ au.get_descripcionA  }}</li>
+                          </ul> 
                 </div>                
             </div>
             {% endfor %}

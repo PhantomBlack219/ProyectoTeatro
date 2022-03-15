@@ -44,5 +44,6 @@ class ActoresForm(forms.ModelForm):
             'nombre', 
             'apellido', 
             'Descripción', 
-            'foto', 
+            'foto',
+            'cargo', 
         ]
