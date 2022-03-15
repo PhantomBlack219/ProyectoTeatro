@@ -6,13 +6,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.views.generic.detail import DetailView
 
-from .models import Obras
+from .models import Obras, Actores
 
-# Create your views here.
-def index(request):
-    template = loader.get_template('Home/index.html')
-    context = {}
-    return HttpResponse(template.render(context,request))
 
 def quienessomos(request):
     template = loader.get_template('Quienes_somos/QuienesSomos.html')
@@ -39,6 +34,13 @@ def listarObras(request):
     lista = Obras.objects.all()
     context = {'lista':lista}
     template = loader.get_template('oteatro/obras.html')
+    return HttpResponse(template.render(context,request))
+
+#vista para listar Actores
+def listarActores(request):
+    listaA = Actores.objects.all()
+    context = {'listaA':listaA}
+    template = loader.get_template('Home/index.html')
     return HttpResponse(template.render(context,request))
 
 #Vista para ver detalles de una obra

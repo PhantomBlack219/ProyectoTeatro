@@ -68,13 +68,14 @@
             <p class="lead fw-normal text-muted mb-5">Dedicados a sacar sonrisas...</p>
         </div>
         <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5 mb-5 mb-xl-0">
+          {% for au in listaA %} 
+          <div class="col mb-5 mb-5 mb-xl-0" display = "inline">
                 <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6051.JPG" alt="..." />
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="{{  au.get_fotoA }}" alt="..." />
                     <h5 class="fw-bolder"></h5>
                     <div class="fst-italic text-muted"></div>
                         <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            MARGY GONZALEZ
+                          {{ au.get_nombreA }}
                           </button>
                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -84,7 +85,7 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  ...
+                                  {{ au.get_descripcionA }}
                                 </div>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
                                     <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
@@ -95,254 +96,8 @@
                           </div>
                 </div>                
             </div>
-            <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6131.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        JONATHAN SOLANO
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                        </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="col mb-5 mb-5 mb-sm-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_5915.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        DANIEL JIMENEZ
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6192.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        JOHANA CALAMBAS
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>    
-</section>
-<section class="py-5 bg-light">
-    <div class="container px-5 my-3">        
-        <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_5985.jpg" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            BRAYAN FLOREZ
-                          </button>
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  ...
-                                </div>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                    <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                </div>                
-            </div>
-            <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/ERIKA_SANABRIA.jpg" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        ERIKA SANABRIA
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="col mb-5 mb-5 mb-sm-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/CAROLINA%20PAGINA.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        CAROLINA RIVERA
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6032.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        FABIAN CHAPARRO
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>    
-</section>
-<section class="py-5 bg-light">
-    <div class="container px-5 my-3">        
-        <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6176.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            MAHLY CHAPARRO
-                          </button>
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  ...
-                                </div>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                    <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                </div>                
-            </div>
-            <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://teatrouis.info/images/IMG_6184.JPG" alt="..." />
-                    <h5 class="fw-bolder"></h5>
-                    <div class="fst-italic text-muted"></div>
-                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        LAURA HERNANDEZ
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
-                                <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>                        
-        </div>
+            {% endfor %}
+           
     </div>    
 </section>
 </main>
