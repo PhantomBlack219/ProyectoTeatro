@@ -15,45 +15,25 @@
  <section class="py-5">
   <div class="container px-5">
       <h2 class="fw-bolder mx-auto" text align="center">Nuestras obras</h2>
-      <div class="row gx-5">
-          <div class="col-lg-4 mb-5">
+     
+      <div class="row gx-5" >
+        {% for au in lista %}
+          <div class="col-lg-4 mb-5" display = "inline">
               <div class="card h-100 shadow border-0">
-                  <img class="card-img-top" src="https://teatrouis.info/images/AFICHE%20TEMPORADA%20ENERO%202021.jpg" alt="..." />
+                  <img class="card-img-top" src= "{{  au.get_foto }}" alt="..." />
                   <div class="card-body p-4">
               
-                      <a class="text-decoration-none link-dark stretched-link" href="#!"><div class="h5 card-title mb-3"><h3 class="fw-bolder mx-auto" text align="center">
-                        Pandemia bufa
+                      <a class="text-decoration-none link-dark stretched-link" href="{% url 'obras_detalle' au.id %}">
+                          <div class="h5 card-title mb-3"><h3 class="fw-bolder mx-auto" text align="center">
+                        {{ au.get_nombre }}
                       </h3>
-                    </div></a>
+                    </div></a>&nbsp;
    
                   </div>
               </div>
           </div>
-          <div class="col-lg-4 mb-5">
-              <div class="card h-100 shadow border-0">
-                  <img class="card-img-top" src="https://teatrouis.info/images/FICHE_EST.jpg" alt="..." />
-                  <div class="card-body p-4">
-                      
-                      <a class="text-decoration-none link-dark stretched-link" href="#!"><div class="h5 card-title mb-3"><h3 class="fw-bolder mx-auto" text align="center">
-                        Medio ambiente no... mejor completo </h3> </div></a>
-                      
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 mb-5">
-              <div class="card h-100 shadow border-0">
-                  <img class="card-img-top" src="https://teatrouis.info/images/FICHE_NEXT.jpg" alt="..." />
-                  <div class="card-body p-4">
-                      <a class="text-decoration-none link-dark stretched-link" href="#!"><div class="h5 card-title mb-3"><h3 class="fw-bolder mx-auto" text align="center">
-                        El secreto bien guardado</h3> </div></a>
-                      
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-</main>
+        {% endfor %}
+      </div> 
     {% endblock %}
 
   
