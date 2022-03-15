@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'teatro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'loxunwou',
-        'USER': 'loxunwou',
-        'PASSWORD': 'nu_VLi3xNYN-b8nerJIg3Ahkn7y273G2',
-        'HOST': 'castor.db.elephantsql.com',
+        'NAME': 'tcytmkkl',
+        'USER': 'tcytmkkl',
+        'PASSWORD': 'ZpXmg57LcgS3Wx7h4ESCd746Y1sM86iX',
+        'HOST': 'salt.db.elephantsql.com',
         'PORT': ''
     }
 }

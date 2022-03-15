@@ -6,13 +6,20 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.views.generic.detail import DetailView
 
-from .models import Obras, Actores
+from .models import Obras, Actores, Blog
 
 #vista para listar Actores
 def listarActores(request):
     listaA = Actores.objects.all()
     context = {'listaA':listaA}
     template = loader.get_template('Home/index.html')
+    return HttpResponse(template.render(context,request))
+
+#vista para listar Actores
+def listarBlog(request):
+    listaB = Blog.objects.all()
+    context = {'listaB':listaB}
+    template = loader.get_template('blog/bloghome.html')
     return HttpResponse(template.render(context,request))
 
 
@@ -51,4 +58,12 @@ def detail_view(request, id):
     context['object'] = Obras.objects.get(id = id)
 
     return render(request,'oteatro/obras_detalle.html',context)
+
+#Vista para ver detalles de un blog
+def detail_view_blog(request, id):
+    context = {}
+
+    context['object'] = Blog.objects.get(id = id)
+
+    return render(request,'oteatro/blog_detalle.html',context)
 

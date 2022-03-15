@@ -19,21 +19,15 @@
             <p class="lead fw-normal text-muted mb-0">Portafolio Teatro</p>
         </div>
         <div class="row gx-5">
-            
+            {% for au in listaB %}    
             <div class="col-lg-6"  display = "inline">
                 <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'b1' %}">Alcen la mano…</a>
+                    <img class="img-fluid rounded-3 mb-3" src="{{  au.get_fotoB }}" alt="..." />
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'blog_detalle' au.id %}">Alcen la mano…</a>
                 </div>
             </div>
-        
+        {% endfor %}
             
-    </div>
-</section>
-<section class="py-5 bg-light">
-    <div class="container px-5 my-5">
-        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-        <a class="btn btn-lg btn-primary" href="#!">Contact us</a>
     </div>
 </section>
 </main>

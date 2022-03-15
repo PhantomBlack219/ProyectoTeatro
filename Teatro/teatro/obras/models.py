@@ -72,24 +72,30 @@ class Actores(models.Model):
         texto= "{0} ({1})"
         return texto.format(self.nombreA + ' '+ self.apellidoA, self.id)
     
-class Blog(models.Model):    
-    fotoB = models.CharField(max_length=200, default="link")
-    tituloP =  models.CharField(max_length=200)
-    fechaA = models.CharField(max_length=100)
-    nombreAu = models.CharField(max_length=200)
-    escritoC = models.CharField(max_length=1000)
+class Blog(models.Model):
+    tituloB =  models.CharField(max_length=200)
+    nombreB = models.CharField(max_length=200)
+    fechaB = models.DateField()
+    escritoB= models.CharField(max_length=200)
+    fotoB= models.CharField(max_length=1000, default="link")
     
-    def get_fotoP(self):
+    def get_tituloB(self):
+        return self.tituloB
+    def get_nombreB(self):
+        return self.nombreB
+    def get_fechaB(self):
+        return self.fechaB
+    def get_escritoB(self):
+        return self.escritoB
+    def get_fotoB(self):
         return self.fotoB
-    def get_tituloP(self):
-        return self.tituloP
-    def get_fechaA(self):
-        return self.fechaA
-    def get_nombreAu(self):
-        return self.nombreAu
-    def get_escritoC(self):
-        return self.escritoC
-    
+
     def __str__(self):
         texto= "{0} ({1})"
-        return texto.format(self.tituloP)
+        return texto.format(self.tituloB,self.id)
+
+class ActoresPersonajes(models.Model):
+    Actor =  models.ForeignKey(Actores, on_delete=models.CASCADE)
+    Personaje = models.ForeignKey(Personajes, on_delete=models.CASCADE)
+    
+
