@@ -74,39 +74,35 @@
             <h2 class="fw-bolder">Nuestro Equipo</h2>
             <p class="lead fw-normal text-muted mb-5">Dedicados a sacar sonrisas...</p>
         </div>
-        <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-        <!-- Enlace con el crud de actores-->
+        <div class="row gx-5 row-cols-1 row-cols-sm-6 row-cols-xl-4 justify-content-center">
           {% for au in listaA %} 
-          <div class="col mb-5 mb-5 mb-xl-0" display = "inline">
+          <div class=" mb-5 mb-xl-0" display = "inline">              
                 <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="{{  au.get_fotoA }}" alt="..." />
+                    <img class="img-fluid rounded-circle mb-xl-0 px-5 p-3" src="{{  au.get_fotoA }}" alt="..." />
                     <h5 class="fw-bolder"></h5>
                     <div class="fst-italic text-muted"></div>
-                    
                         <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          {{ au.get_nombreA }} {{ au.get_apellidoA }}
+                          {{ au.get_nombreA }}
                           </button>
-                          
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">{{ au.get_cargoA }}</h5>
+                                <div class="modal-header text-center">
+                                  <h5 class="modal-title" id="exampleModalLabel">Papel</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  {{ au.get_descripcionA}}
+                                  {{ au.get_descripcionA }}
                                 </div>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-lg-center mb-2">                        
                                     <a class="btn btn-outline-primary" href="{% url 'obras' %}">Obras</a>
                                 </div>
                                 
                               </div>
-                             
                             </div>
                           </div>
-                </div>             
-              </div>
+                </div>                
+            </div>
             {% endfor %}
            
     </div>    
