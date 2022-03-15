@@ -55,13 +55,18 @@ class Actores(models.Model):
     apellidoA =  models.CharField(max_length=200)
     DescripciónA = models.CharField(max_length=1000)
     fotoA = models.CharField(max_length=200, default="link")
+    CargoA= models.CharField(max_length=1000)
 
     def get_nombreA(self):
         return self.nombreA
+    def get_apellidoA(self):
+        return self.apellidoA
     def get_descripcionA(self):
         return self.DescripciónA
     def get_fotoA(self):
         return self.fotoA
+    def get_cargoA(self):
+        return self.CargoA
 
     def __str__(self):
         texto= "{0} ({1})"
