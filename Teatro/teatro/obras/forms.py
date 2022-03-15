@@ -48,3 +48,18 @@ class ActoresForm(forms.ModelForm):
             'foto',
             'cargo', 
         ]
+
+class BlogForm(forms.ModelForm):
+
+    #metaclase
+    class Meta:
+        model = Blog
+
+        #especificar los campos
+        fields = [
+            'foto', 
+            'titulo', 
+            'fecha', 
+            'nombre',
+            'escrito', 
+        ]

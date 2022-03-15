@@ -72,13 +72,12 @@ class Actores(models.Model):
         texto= "{0} ({1})"
         return texto.format(self.nombreA + ' '+ self.apellidoA, self.id)
     
-class Blog(models.Model):
-        
+class Blog(models.Model):    
     fotoB = models.CharField(max_length=200, default="link")
     tituloP =  models.CharField(max_length=200)
     fechaA = models.CharField(max_length=100)
     nombreAu = models.CharField(max_length=200)
-    escritoC = models.CharField(max_Length=10000)
+    escritoC = models.CharField(max_length=1000)
     
     def get_fotoP(self):
         return self.fotoB
@@ -93,4 +92,4 @@ class Blog(models.Model):
     
     def __str__(self):
         texto= "{0} ({1})"
-        return texto.format(self.tituloP+ ' '+ self.nombreAu, self.fechaA,self.escritoC)
+        return texto.format(self.tituloP)
